@@ -9,6 +9,6 @@ Than go to [UserScripts List](https://asshumski.github.io/userScripts/index.html
 
 List of Scripts:
 
-1. 	Bitbucket to phpStorm file linker [install](userScripts/openInStorm.user.js)
+1. 	Bitbucket to phpStorm file linker 
 
 	Creating file links from Pull Request Diff that open file directly in phpStorm 
