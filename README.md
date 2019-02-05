@@ -2,9 +2,13 @@
 
 List of userscripts for Tampermonkey extension.
 
-1. Bitbucket to phpStorm file linker 
+To use UserScripts you need to install chrome extension from [Google's Web Store](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=ru)
 
-⋅⋅⋅Creating file links from Pull Request Diff that open file directly in phpStorm 
+Than go to [UserScripts List](https://asshumski.github.io/userScripts/index.html) and click on script you want to install
 
 
-You can find installation links [here](https://asshumski.github.io/userScripts/index.html)
+List of Scripts:
+
+1. 	Bitbucket to phpStorm file linker 
+
+	Creating file links from Pull Request Diff that open file directly in phpStorm 
