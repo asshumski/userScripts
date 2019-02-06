@@ -25,6 +25,7 @@
             if ($('.commit-files-summary .file').length) {
                 clearInterval(intervalFlag);
                 this._createLinks();
+                this._addCheckoutBtn();
             }
 
         },
@@ -47,6 +48,22 @@
                 linkToStorm.appendTo(currentListItem);
                 linkToStorm.clone(true, true).appendTo(currentFileDiffBlockTitle);
             });
+        },
+
+        _addCheckoutBtn: function(){
+            var widgetConatainer = $('.compare-widget-container'),
+                branchName = $('.compare-widget-container [data-branch-name]:first-child').data('branchName'),
+                checkoutBtn = $('<button style="cursor:pointer;" class="diff-entry-lozenge aui-lozenge aui-lozenge-subtle aui-lozenge-complete">Copy Checkout Command</button>');
+
+            checkoutBtn.on('click', function(){
+                var $temp = $("<input>");
+                $("body").append($temp);
+                $temp.val('git checkout ' + branchName).select();
+                document.execCommand("copy");
+                $temp.remove();
+            });
+
+            checkoutBtn.appendTo(widgetConatainer);
         }
     };
 
