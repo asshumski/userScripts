@@ -22,7 +22,7 @@
         },
 
         _checkDiff: function(){
-            if ($('.commit-files-summary .file-modified').length) {
+            if ($('.commit-files-summary .file').length) {
                 clearInterval(intervalFlag);
                 this._createLinks();
             }
@@ -30,7 +30,7 @@
         },
 
         _createLinks: function(){
-            var $fileList = $('.commit-files-summary .file-modified');
+            var $fileList = $('.commit-files-summary .file');
 
             $fileList.each(function(){
                 var currentListItem = $(this),
