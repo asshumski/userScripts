@@ -4,7 +4,8 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       Andrey Shumski
-// @match        https://bitbucket.org/kinomoltd/ecom-magento-cloud/pull-requests/*
+// @match        https://bitbucket.org/*/pull-requests/*
+// @match        https://bitbucket.org/*/commits/*
 // @grant        none
 // ==/UserScript==
 
