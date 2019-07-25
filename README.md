@@ -11,4 +11,5 @@ List of Scripts:
 
 1. 	Bitbucket to phpStorm file linker [View](userScripts/openInStorm.user.js)
 
-	Creating file links from Pull Request Diff that open file directly in phpStorm 
+	It allows you to open modified files directly from Pull request or Commit pages (if your local env is currently on this branch or source is exists)
+	![Image](https://asshumski.github.io/userScripts/image.png)
