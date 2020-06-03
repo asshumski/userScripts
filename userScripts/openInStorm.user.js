@@ -27,6 +27,7 @@
                 clearInterval(intervalFlag);
                 this._createLinks();
                 this._addCheckoutBtn();
+                this._addFilterControl();
             }
 
         },
@@ -65,6 +66,37 @@
             });
 
             checkoutBtn.appendTo(widgetConatainer);
+        },
+        _addFilterControl: function(){
+            var $fileList = $('.commit-files-summary .file'),
+                extList = ['all', 'phtml', 'xml', 'less', 'js', 'php'],
+                $filterControl = $('<select />'),
+                $option;
+
+            $fileList.each(function(){
+                var filePath = $(this).data('fileIdentifier'),
+                    fileExt = filePath.split('.').reverse()[0];
+                $(this).attr('extension', fileExt);
+            });
+
+            $.each(extList, function(){
+                $option = $('<option />');
+                $option.attr('value', this);
+                $option.text(this);
+
+                $filterControl.append($option);
+            })
+
+            $filterControl.on('change', function(){
+                if (this.value != 'all'){
+                    $fileList.show();
+                    $fileList.filter(':not([extension=' + this.value + '])').hide();
+                } else {
+                    $fileList.show();
+                }
+            });
+
+            $filterControl.insertBefore('#commit-files-summary');
         }
     };
 
